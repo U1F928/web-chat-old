@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body
+        {
+            overflow-y: hidden;
+            background-color: #E5E5EB;
+        }
+        .loginbar 
+        {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+        input
+        {
+            border: black solid 0.2%;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            margin: 1%;
+            padding: 0.5rem;
+        }
+        #login-button
+        {
+            background-color: #92A8D1;
+        }
+    </style>
+</head>
+<body>
+    <div class="loginbar">        
+        <input id="room-name-form"  type="text" placeholder="Enter room name"> 
+        <input id="login-button" type="button" value="Join/Create Room" onclick="redirect()">
+    </div>
+
+</body>
+<script src="/static/home.js"> </script>
+ 
+</html>
