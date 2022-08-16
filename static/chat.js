@@ -57,7 +57,8 @@ function get_older_comments(num_of_comments_to_load)
     // if scrollbar reaches the top, load older comments
     var comment_section = document.getElementById("comment-section");
     var num_of_comments = document.getElementsByClassName("comment").length;
-    if (
+    if 
+    (
         comment_section.scrollTop === 0 &&
         num_of_comments > 0 &&
         smallest_loaded_id > 1 &&
@@ -76,7 +77,7 @@ function create_comment_element(comment)
     var new_comment = document.createElement("div");
     new_comment.classList.add("comment");
     new_comment.id = comment.in_room_id;
-    new_comment.innerHTML = comment.text;
+    new_comment.innerText = comment.text;
     return new_comment;
 }
 
