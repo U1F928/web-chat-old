@@ -8,19 +8,19 @@
     <style>
         body
         {
-            background-color: #E5E5EB;
+            background-color: #f8f8f8;
+            font-family: "Calibri", "Roboto", sans-serif;
         }
         .grid
         {
             display: grid;
-            grid-template-rows: 5fr 80vh 5fr;  
+            grid-template-rows: 5vh 85vh 5vh;  
         }
         #room-name
         {
             place-self: center;
-            font-family: Arial, Helvetica, sans-serif;
             font-size: 2rem;
-            font-weight: 700;
+            color: #e7a172;
         }
         #comment-section
         {
@@ -39,20 +39,21 @@
         }
         .comment
         {
-            border-radius: 0.5rem;
             margin: 0.2rem;
             padding: 0.5rem;
             font-size: 1rem;
-            font-family: Arial, Helvetica, sans-serif;
             word-break: break-all;
             clear:both;
             float:left;
-            background-color: #92A8D1;
+            border-radius: 2px;
+            background-color: #c7eafc;
+            color: #45829b;
         }
         #second-grid
         {
             display: grid;
-            grid-template-columns: 90fr 10fr;
+            bottom: 0;
+            grid-template-columns: 80% 10%;
             column-gap: 0;
             margin-left: 3%;
             margin-right: 3%;
@@ -61,15 +62,24 @@
         #comment-form
         {
             border: none;
-            border-radius: 0.5rem;
             font-size: 1rem;
-            padding: 1rem;
-            background-color: #92A8D1;
+            padding: 0.5rem;
+            background-color: #f8f8f8;
+            border: solid 2px;
+            border-radius: 2px;
+            border-color: #808080;
+            color: #808080;
         }
-        #send-icon
+        #send-button
         {
-            place-self: center;
-            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            background-color: #a3d063;
+            border: 2px solid;
+            border-color: #a3d063;
+            border-radius: 2px;
+            color: white;
+            margin: auto;
         }
     </style>
 </head>
@@ -86,7 +96,7 @@
         
         <span id="second-grid">
             <input id="comment-form" type="text" name="comment_text" placeholder="Aa">
-            <img id="send-icon" src="/static/send_blue.svg" width="60fr" height="60fr">
+            <button id="send-button"> Send</button>
         </span>
 
 
