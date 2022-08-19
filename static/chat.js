@@ -141,7 +141,7 @@ function add_listener_for_send_by_enter()
 }
 function add_listener_for_send_by_click()
 {
-    var send_icon=document.getElementById("send-icon");
+    var send_icon=document.getElementById("send-button");
     send_icon.addEventListener("click", send_comment);
 }
 
