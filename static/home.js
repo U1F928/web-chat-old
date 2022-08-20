@@ -1,12 +1,12 @@
 function redirect()
 {
-    var room_name=document.getElementById("room-name-form").value;
+    let room_name=document.getElementById("room-name-form").value;
     window.location.href = "/"+room_name;
 }
 
 function add_listener_for_enter()
 {
-    var room_name_form= document.getElementById("room-name-form");
+    let room_name_form = document.getElementById("room-name-form");
     room_name_form.addEventListener(
         "keydown",
         function()
@@ -20,4 +20,4 @@ function main()
     add_listener_for_enter();
 }
 
-window.onload=main();
+window.onload = main();

@@ -1,13 +1,13 @@
 function join_room()
 {
-    var room_name = document.getElementById("room-name").innerText;
+    let room_name = document.getElementById("room-name").innerText;
     socket.emit("join", room_name);
     request_biggest_id();
 }
 
 function update_loading_older_comments_icon()
 {
-    var loading_icon = document.getElementById("loading-icon");
+    let loading_icon = document.getElementById("loading-icon");
     if (smallest_loaded_id > smallest_requested_id)
     {
         loading_icon.style.visibility = "visible";
@@ -17,13 +17,13 @@ function update_loading_older_comments_icon()
 
 function request_biggest_id()
 {
-    var room_name = document.getElementById("room-name").innerText;
+    let room_name = document.getElementById("room-name").innerText;
     socket.emit("request_biggest_id", room_name)
 }
 
 function handle_biggest_id(response)
 {
-    var biggest_id = response.id;
+    let biggest_id = response.id;
     // if no comments posted in room
     if (biggest_id === 0);
     // if there are comments posted but none are loaded in client
@@ -42,8 +42,8 @@ function handle_biggest_id(response)
 
 function request_comments(biggest_id, smallest_id)
 {
-    var room_name = document.getElementById("room-name").innerText;
-    var request = {
+    let room_name = document.getElementById("room-name").innerText;
+    let request = {
         "room_name": room_name,
         "biggest_id": biggest_id,
         "smallest_id": smallest_id
@@ -55,8 +55,8 @@ function request_comments(biggest_id, smallest_id)
 function get_older_comments(num_of_comments_to_load)
 {
     // if scrollbar reaches the top, load older comments
-    var comment_section = document.getElementById("comment-section");
-    var num_of_comments = document.getElementsByClassName("comment").length;
+    let comment_section = document.getElementById("comment-section");
+    let num_of_comments = document.getElementsByClassName("comment").length;
     if 
     (
         comment_section.scrollTop === 0 &&
@@ -65,8 +65,8 @@ function get_older_comments(num_of_comments_to_load)
         (smallest_requested_id === smallest_loaded_id)
     )
     {
-        var id_a = smallest_loaded_id - 1;
-        var id_b = Math.max(smallest_loaded_id - num_of_comments_to_load, 1);
+        let id_a = smallest_loaded_id - 1;
+        let id_b = Math.max(smallest_loaded_id - num_of_comments_to_load, 1);
         request_comments(id_a, id_b);
     }
     update_loading_older_comments_icon();
@@ -74,7 +74,7 @@ function get_older_comments(num_of_comments_to_load)
 
 function create_comment_element(comment)
 {
-    var new_comment = document.createElement("div");
+    let new_comment = document.createElement("div");
     new_comment.classList.add("comment");
     new_comment.id = comment.in_room_id;
     new_comment.innerText = comment.text;
@@ -83,15 +83,15 @@ function create_comment_element(comment)
 
 function insert_comment(new_comment)
 {
-    var comment_section = document.getElementById("comment-section");
-    var comments = document.getElementsByClassName("comment");
-    var dist_from_bottom = comment_section.scrollHeight - comment_section.scrollTop;
-    var old_scroll_top = comment_section.scrollTop;
+    let comment_section = document.getElementById("comment-section");
+    let comments = document.getElementsByClassName("comment");
+    let dist_from_bottom = comment_section.scrollHeight - comment_section.scrollTop;
+    let old_scroll_top = comment_section.scrollTop;
     // with WebSocket messages are guaranteed to be in order
     // BUT socketio falls back on other protocols that do not guarantee it
 
     // insert comment before the first comment in comment section that is newer
-    for (var i = 0; i < comments.length; i++)
+    for (let i = 0; i < comments.length; i++)
     {
         if (parseInt(comments[i].id) > parseInt(new_comment.id))
         {
@@ -101,7 +101,7 @@ function insert_comment(new_comment)
         }
     }
     // if new_comment is newer than all other comments in comment section append it
-    var scrolled_to_bottom = comment_section.scrollHeight - comment_section.scrollTop === comment_section.clientHeight
+    let scrolled_to_bottom = comment_section.scrollHeight - comment_section.scrollTop === comment_section.clientHeight
     comment_section.appendChild(new_comment);
     if(scrolled_to_bottom)
     {
@@ -116,7 +116,7 @@ function insert_comment(new_comment)
 
 function update_comment_section(new_comments)
 {
-    for (var new_comment of new_comments)
+    for (let new_comment of new_comments)
     {
         insert_comment(create_comment_element(new_comment));
         smallest_loaded_id = Math.min(new_comment.in_room_id, smallest_loaded_id);
@@ -127,9 +127,9 @@ function update_comment_section(new_comments)
 
 function send_comment()
 {
-    var comment_section = document.getElementById("comment-section");
-    var text = document.getElementById("comment-form").value;
-    var room_name = document.getElementById("room-name").innerText;
+    let comment_section = document.getElementById("comment-section");
+    let text = document.getElementById("comment-form").value;
+    let room_name = document.getElementById("room-name").innerText;
     document.getElementById("comment-form").value = "";
     socket.emit("new_comment",
     {
@@ -142,7 +142,7 @@ function send_comment()
 
 function add_listener_for_send_by_enter()
 {
-    var comment_form = document.getElementById("comment-form");
+    let comment_form = document.getElementById("comment-form");
     comment_form.addEventListener(
         "keydown",
         function()
@@ -152,7 +152,7 @@ function add_listener_for_send_by_enter()
 }
 function add_listener_for_send_by_click()
 {
-    var send_icon=document.getElementById("send-button");
+    let send_icon=document.getElementById("send-button");
     send_icon.addEventListener("click", send_comment);
 }
 
