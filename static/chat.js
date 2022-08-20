@@ -150,6 +150,7 @@ function add_listener_for_send_by_enter()
             if (event.key === "Enter") send_comment();
         });
 }
+
 function add_listener_for_send_by_click()
 {
     let send_icon = document.getElementById("send-button");
