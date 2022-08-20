@@ -5,7 +5,7 @@ import models
 
 app = flask.Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///test.db"
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 socketio = flask_socketio.SocketIO(app)
 models.db.init_app(app)
 
@@ -23,7 +23,7 @@ def render_chat(room_name):
 
 @socketio.on("join")
 def join(room_name):
-    if (models.Room.query.get(room_name) == None):
+    if models.Room.query.get(room_name) == None:
         models.Room.create(room_name)
         # create_room(room_name)
     flask_socketio.join_room(room_name)
@@ -50,19 +50,21 @@ def handle_comments_request(comments_request):
     comments = models.Comment.query.filter(
         models.Comment.room_name == room_name,
         models.Comment.in_room_id <= biggest_id,
-        models.Comment.in_room_id >= smallest_id
+        models.Comment.in_room_id >= smallest_id,
     )
     # list(map(jsonify_comment, comments))
     jsonified_comments = [c.to_JSON() for c in comments]
-    flask_socketio.emit("update_comment_section",
-                        jsonified_comments, room=flask.request.sid)
+    flask_socketio.emit(
+        "update_comment_section", jsonified_comments, room=flask.request.sid
+    )
 
 
 @socketio.on("new_comment")
 def handle_new_comment(comment):
     comment = models.Comment.create(comment)
-    flask_socketio.emit("update_comment_section", [
-                        comment.to_JSON()], room=comment.room_name)
+    flask_socketio.emit(
+        "update_comment_section", [comment.to_JSON()], room=comment.room_name
+    )
 
 
 if __name__ == "__main__":

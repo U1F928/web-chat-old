@@ -36,6 +36,9 @@ class Comment(db.Model):
         return new_comment
 
     def to_JSON(self):
-        json = {"room_name": self.room_name,
-                "in_room_id": self.in_room_id, "text": self.text}
+        json = {
+            "room_name": self.room_name,
+            "in_room_id": self.in_room_id,
+            "text": self.text,
+        }
         return json
