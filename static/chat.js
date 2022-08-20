@@ -83,9 +83,10 @@ function create_comment_element(comment)
 
 function insert_comment(new_comment)
 {
-    var inserted_comment = false;
     var comment_section = document.getElementById("comment-section");
     var comments = document.getElementsByClassName("comment");
+    var dist_from_bottom = comment_section.scrollHeight - comment_section.scrollTop;
+    var old_scroll_top = comment_section.scrollTop;
     // with WebSocket messages are guaranteed to be in order
     // BUT socketio falls back on other protocols that do not guarantee it
 
@@ -95,18 +96,26 @@ function insert_comment(new_comment)
         if (parseInt(comments[i].id) > parseInt(new_comment.id))
         {
             comments[i].before(new_comment);
-            inserted_comment = true;
-            break;
+            comment_section.scrollTop = comment_section.scrollHeight - dist_from_bottom;
+            return;
         }
     }
     // if new_comment is newer than all other comments in comment section append it
-    if (!inserted_comment) comment_section.appendChild(new_comment);
+    var scrolled_to_bottom = comment_section.scrollHeight - comment_section.scrollTop === comment_section.clientHeight
+    comment_section.appendChild(new_comment);
+    if(scrolled_to_bottom)
+    {
+        // scroll back to the bottom
+        comment_section.scrollTop = comment_section.scrollHeight - comment_section.clientHeight;
+    }
+    else
+    {
+        comment_section.scrollTop = old_scroll_top;
+    }
 }
 
 function update_comment_section(new_comments)
 {
-    var comment_section = document.getElementById("comment-section");
-    var dist_from_bottom = comment_section.scrollHeight - comment_section.scrollTop;
     for (var new_comment of new_comments)
     {
         insert_comment(create_comment_element(new_comment));
@@ -114,11 +123,11 @@ function update_comment_section(new_comments)
         biggest_loaded_id = Math.max(new_comment.in_room_id, biggest_loaded_id);
     }
     // jump to the last viewing position after it was pushed down when inserting comment
-    comment_section.scrollTop = comment_section.scrollHeight - dist_from_bottom;
 }
 
 function send_comment()
 {
+    var comment_section = document.getElementById("comment-section");
     var text = document.getElementById("comment-form").value;
     var room_name = document.getElementById("room-name").innerText;
     document.getElementById("comment-form").value = "";
@@ -127,6 +136,8 @@ function send_comment()
         text: text,
         room_name: room_name
     });
+    // scroll to the bottom
+    comment_section.scrollTop = comment_section.scrollHeight - comment_section.clientHeight;
 }
 
 function add_listener_for_send_by_enter()
