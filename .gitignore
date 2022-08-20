@@ -6,3 +6,4 @@ __pycache__
 pyvenv.cfg
 share
 test.db
+.vscode
