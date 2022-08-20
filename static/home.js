@@ -1,7 +1,7 @@
 function redirect()
 {
-    let room_name=document.getElementById("room-name-form").value;
-    window.location.href = "/"+room_name;
+    let room_name = document.getElementById("room-name-form").value;
+    window.location.href = "/" + room_name;
 }
 
 function add_listener_for_enter()

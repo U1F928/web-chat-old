@@ -57,8 +57,7 @@ function get_older_comments(num_of_comments_to_load)
     // if scrollbar reaches the top, load older comments
     let comment_section = document.getElementById("comment-section");
     let num_of_comments = document.getElementsByClassName("comment").length;
-    if 
-    (
+    if (
         comment_section.scrollTop === 0 &&
         num_of_comments > 0 &&
         smallest_loaded_id > 1 &&
@@ -103,7 +102,7 @@ function insert_comment(new_comment)
     // if new_comment is newer than all other comments in comment section append it
     let scrolled_to_bottom = comment_section.scrollHeight - comment_section.scrollTop === comment_section.clientHeight
     comment_section.appendChild(new_comment);
-    if(scrolled_to_bottom)
+    if (scrolled_to_bottom)
     {
         // scroll back to the bottom
         comment_section.scrollTop = comment_section.scrollHeight - comment_section.clientHeight;
