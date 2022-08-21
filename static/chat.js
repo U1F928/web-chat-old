@@ -171,4 +171,7 @@ function main()
     add_listener_for_send_by_click();
 }
 
-window.onload = main();
+document.addEventListener("DOMContentLoaded", function(event) 
+{ 
+    main();
+});

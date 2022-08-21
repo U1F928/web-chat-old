@@ -20,4 +20,7 @@ function main()
     add_listener_for_enter();
 }
 
-window.onload = main();
+document.addEventListener("DOMContentLoaded", function(event) 
+{ 
+    main();
+});
