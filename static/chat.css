@@ -7,9 +7,9 @@ body
 {
 	height: 98vh;
 	box-sizing: border-box;
-			display: grid;
+	display: grid;
 	grid-template-rows: 4% auto 8%;
-			background-color: #fff;
+	background-color: #fff;
 	font-family: "Calibri", "Roboto", sans-serif;
 	border: 0.5vh solid grey;
 	border-radius: 1vh;
@@ -39,7 +39,7 @@ body
 	color: rgb(75, 74, 74);
 	text-align: center;
 	font-size: 3vh;
-          word-break: break-all;
+	word-break: break-all;
 }
 #comment-section
 {
@@ -55,14 +55,14 @@ body
 .comment
 {
 	margin: 0.2rem;
-          padding: 0.5rem;
-          font-size: 16pt;
-          word-break: break-all;
-          clear:both;
-          float:left;
-          border-radius: 2px;
-          background-color: #34C759;
-          color: white;
+	padding: 0.5rem;
+	font-size: 16pt;
+	word-break: break-all;
+	clear:both;
+	float:left;
+	border-radius: 2px;
+	background-color: #34C759;
+	color: white;
 
 }
 #send-comment
@@ -79,9 +79,9 @@ body
 {
 	overflow: hidden;
 	color: grey;
-          word-break: break-all;
+	word-break: break-all;
 	overflow: hidden;
-          font-size: 16pt;
+	font-size: 16pt;
 }
 #send-button
 {
@@ -93,7 +93,7 @@ body
 	border: 0.3vh solid #1d7233; 
 	border-radius: 0.5vh;
 	cursor: pointer;
-          word-break: break-all;
+	word-break: break-all;
 }
 #send-button:hover
 {
