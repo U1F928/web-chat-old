@@ -1,8 +1,12 @@
-# Chat Room Web App
+# Web Chat
 
 Simple overview of use/purpose.
 
 Demo web application which allows users to create, join and chat in anonymous rooms.
+
+## Live demo
+
+TODO: Link to Heroku
 
 ## Description
 
@@ -21,17 +25,28 @@ An in-depth paragraph about your project and overview of use.
 * ex. Windows 10
 
 * python3
+* python3-pip
+* python3-venv
+* git
 
 ### Installing
 
 * How/where to download your program
-* Any modifications needed to be made to files/folders
+* 
+```
+git clone https://github.com/U1F928/chatRoom
+python3 -m venv chatRoom/virtual_enviroment
+source chatRoom/virtual_enviroment/bin/activate
+python3 -m pip install -r chatRoom/requirements.txt
+deactivate
+```
+
 
 ### Executing program
 
 * How to run the program
 * Step-by-step bullets
 ```
-code blocks for commands
+python3 chatRoom/src/app.py
 ```
 
