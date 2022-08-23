@@ -1,7 +1,9 @@
-import flask_socketio
 import flask
+import flask_socketio
 import models
+
 socketio = flask_socketio.SocketIO()
+
 
 @socketio.on("join")
 def join(room_name):
@@ -47,5 +49,3 @@ def handle_new_comment(comment):
     flask_socketio.emit(
         "update_comment_section", [comment.to_JSON()], room=comment.room_name
     )
-
-
