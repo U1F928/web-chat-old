@@ -15,6 +15,7 @@ sockets.socketio.init_app(app)
 
 
 if __name__ == "__main__":
-    with app.app_context(): models.db.create_all()  # create tables if they don't exist
+    with app.app_context():
+        models.db.create_all()  # create tables if they don't exist
     port = int(os.environ.get("PORT", 5000))  # port 5000 for deploying on Heroku
     sockets.socketio.run(app, host="0.0.0.0", port=port)
