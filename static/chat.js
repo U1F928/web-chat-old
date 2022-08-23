@@ -7,8 +7,7 @@ function join_room()
 
 function update_loading_older_comments_icon()
 {
-    let loading_icon = document.getElementById("loading-icon");
-    if (smallest_loaded_id > smallest_requested_id)
+    let loading_icon = document.getElementById("loading-icon"); if (smallest_loaded_id > smallest_requested_id)
     {
         loading_icon.style.visibility = "visible";
     }
@@ -43,7 +42,8 @@ function handle_biggest_id(response)
 function request_comments(biggest_id, smallest_id)
 {
     let room_name = document.getElementById("room-name").innerText;
-    let request = {
+    let request = 
+    {
         "room_name": room_name,
         "biggest_id": biggest_id,
         "smallest_id": smallest_id
@@ -57,11 +57,12 @@ function get_older_comments(num_of_comments_to_load)
     // if scrollbar reaches the top, load older comments
     let comment_section = document.getElementById("comment-section");
     let num_of_comments = document.getElementsByClassName("comment").length;
-    if (
+    if 
+    (
         comment_section.scrollTop === 0 &&
         num_of_comments > 0 &&
         smallest_loaded_id > 1 &&
-        (smallest_requested_id === smallest_loaded_id)
+        smallest_requested_id === smallest_loaded_id
     )
     {
         let id_a = smallest_loaded_id - 1;
@@ -130,11 +131,11 @@ function send_comment()
     let text = document.getElementById("comment-form").value;
     let room_name = document.getElementById("room-name").innerText;
     document.getElementById("comment-form").value = "";
-    socket.emit("new_comment",
-    {
-        text: text,
-        room_name: room_name
-    });
+    socket.emit
+    (
+        "new_comment",
+        { text: text, room_name: room_name }
+    );
     // scroll to the bottom
     comment_section.scrollTop = comment_section.scrollHeight - comment_section.clientHeight;
 }
@@ -142,12 +143,11 @@ function send_comment()
 function add_listener_for_send_by_enter()
 {
     let comment_form = document.getElementById("comment-form");
-    comment_form.addEventListener(
+    comment_form.addEventListener
+    (
         "keydown",
-        function()
-        {
-            if (event.key === "Enter") send_comment();
-        });
+        function(event) { if (event.key === "Enter") send_comment(); }
+    );
 }
 
 function add_listener_for_send_by_click()
@@ -171,7 +171,8 @@ function main()
     add_listener_for_send_by_click();
 }
 
-document.addEventListener("DOMContentLoaded", function(event) 
-{ 
-    main();
-});
+document.addEventListener
+(
+    "DOMContentLoaded", 
+    function(event) { main(); }
+);
