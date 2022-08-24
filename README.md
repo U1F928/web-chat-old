@@ -60,5 +60,5 @@ Start the server
 ```
 (virtual-enviroment) $ python3 web-chat/src/app.py
 ```
-The web app should be accessible at `0.0.0.0:5000`
+The web app should now be accessible at `0.0.0.0:5000`
 
