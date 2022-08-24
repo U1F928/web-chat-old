@@ -1,8 +1,8 @@
 # Web Chat
 
-Simple overview of use/purpose.
+TODO: Screenshots 
 
-Demo web application which allows users to create, join and chat in anonymous rooms.
+Demo web application which allows users to create, join and chat in anonymous chat rooms.
 
 ## Live demo
 
@@ -12,41 +12,53 @@ TODO: Link to Heroku
 
 An in-depth paragraph about your project and overview of use.
 
-* Backend implemented in Python using the Flask framework. 
-* Data is stored in a SQLite database which is integrated via SQLAlchemy.
+* Backend is implemented in Python using the Flask framework. 
+* Data is stored in a SQLite database which is integrated via Flask-SQLAlchemy.
+* Real-time communication between client and server is handled by Flask-SocketIO.
 * Frontend is implemented using vanilla JavaScript, HTML, CSS.
-* Real-time communication between client and server is handled by SocketIO
 
 ## Getting Started
 
-### Dependencies
-
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+### Prerequisites
 
 * python3
 * python3-pip
 * python3-venv
 * git
 
-### Installing
+### Installation
 
-* How/where to download your program
-* 
+Clone the project
 ```
-git clone https://github.com/U1F928/chatRoom
-python3 -m venv chatRoom/virtual_enviroment
-source chatRoom/virtual_enviroment/bin/activate
-python3 -m pip install -r chatRoom/requirements.txt
-deactivate
+$ git clone https://github.com/U1F928/chatRoom
+```
+Create virtual enviroment in the project directory
+```
+$ python3 -m venv chatRoom/virtual_enviroment
+```
+Activate the virtual enviroment
+```
+$ source chatRoom/virtual_enviroment/bin/activate
+```
+Install dependencies into the virtual enviroment
+```
+$ python3 -m pip install -r chatRoom/requirements.txt
+```
+Deactivate the virtual enviroment
+```
+$ deactivate
 ```
 
 
-### Executing program
+### Run Locally
 
-* How to run the program
-* Step-by-step bullets
+Activate the virtual enviroment
 ```
-python3 chatRoom/src/app.py
+$ source chatRoom/virtual_enviroment/bin/activate
 ```
+Start the server
+```
+$ python3 chatRoom/src/app.py
+```
+The web app should be accessible at `0.0.0.0:5000`
 
