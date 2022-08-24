@@ -42,11 +42,11 @@ $ source web-chat/virtual-enviroment/bin/activate
 ```
 Install dependencies into the virtual enviroment
 ```
-$ python3 -m pip install -r web-chat/requirements.txt
+(virtual-enviroment) $ python3 -m pip install -r web-chat/requirements.txt
 ```
 Deactivate the virtual enviroment
 ```
-$ deactivate
+(virtual-enviroment) $ deactivate
 ```
 
 
@@ -58,7 +58,7 @@ $ source web-chat/virtual-enviroment/bin/activate
 ```
 Start the server
 ```
-$ python3 web-chat/src/app.py
+(virtual-enviroment) $ python3 web-chat/src/app.py
 ```
 The web app should be accessible at `0.0.0.0:5000`
 
