@@ -30,19 +30,19 @@ An in-depth paragraph about your project and overview of use.
 
 Clone the project
 ```
-$ git clone https://github.com/U1F928/chatRoom
+$ git clone https://github.com/U1F928/web-chat
 ```
 Create virtual enviroment in the project directory
 ```
-$ python3 -m venv chatRoom/virtual_enviroment
+$ python3 -m venv web-chat/virtual-enviroment
 ```
 Activate the virtual enviroment
 ```
-$ source chatRoom/virtual_enviroment/bin/activate
+$ source web-chat/virtual-enviroment/bin/activate
 ```
 Install dependencies into the virtual enviroment
 ```
-$ python3 -m pip install -r chatRoom/requirements.txt
+$ python3 -m pip install -r web-chat/requirements.txt
 ```
 Deactivate the virtual enviroment
 ```
@@ -54,11 +54,11 @@ $ deactivate
 
 Activate the virtual enviroment
 ```
-$ source chatRoom/virtual_enviroment/bin/activate
+$ source web-chat/virtual-enviroment/bin/activate
 ```
 Start the server
 ```
-$ python3 chatRoom/src/app.py
+$ python3 web-chat/src/app.py
 ```
 The web app should be accessible at `0.0.0.0:5000`
 

@@ -1,5 +1,4 @@
 __pycache__
-chatRoomEnv
-test.db
+virtual-enviroment
 database.db
 .vscode
