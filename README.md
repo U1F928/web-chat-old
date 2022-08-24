@@ -1,11 +1,5 @@
 # Web Chat
 
-TODO: Screenshots 
-![home-page-2-web-chat](https://user-images.githubusercontent.com/110688318/186485755-dfc9c385-1113-4623-a280-c7d730dc6e01.png)
-
-![chat-page-2-web-chat](https://user-images.githubusercontent.com/110688318/186485716-a72e64fe-3e36-4f57-81d9-46eb423af412.png)
-
-
 Demo web application which allows users to create, join and chat in anonymous chat rooms.
 
 ## Live demo
@@ -66,3 +60,8 @@ Start the server
 ```
 The web app should now be accessible at `0.0.0.0:5000`
 
+## Screenshots
+
+![home-page-2-web-chat](https://user-images.githubusercontent.com/110688318/186485755-dfc9c385-1113-4623-a280-c7d730dc6e01.png)
+
+![chat-page-2-web-chat](https://user-images.githubusercontent.com/110688318/186485716-a72e64fe-3e36-4f57-81d9-46eb423af412.png)
