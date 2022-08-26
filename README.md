@@ -1,10 +1,10 @@
 # Web Chat
 
-Demo web application which allows users to create, join and chat in anonymous chat rooms.
+Simple web application which allows users to create, join and chat in anonymous chat rooms.
 
 ## Live demo
 
-TODO: Link to Heroku
+https://web-chat.fly.dev/
 
 ## Description
 
