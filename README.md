@@ -66,5 +66,4 @@ The web app should now be accessible at `0.0.0.0:5000`
 c39c5f35693.png) 
  
  
-![chat-page-2-web-chat](https://user-images.githubusercontent.com/110688318/186485716-a72e64fe-3e36-4f57-81d9-4
-6eb423af412.png)
+![chat-page-2-web-chat](https://user-images.githubusercontent.com/110688318/186485716-a72e64fe-3e36-4f57-81d9-46eb423af412.png)
