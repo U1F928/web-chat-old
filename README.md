@@ -2,7 +2,7 @@
 
 Simple web application which allows users to create, join and chat in anonymous chat rooms.
 
-## Live demo
+## Live Demo
 
 https://web-chat.fly.dev/
 
