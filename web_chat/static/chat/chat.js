@@ -7,11 +7,12 @@ function join_room()
 
 function update_loading_older_comments_icon()
 {
-    let loading_icon = document.getElementById("loading-icon"); if (smallest_loaded_id > smallest_requested_id)
+    let loading_icon = document.getElementById("loading-icon"); 
+    if (smallest_loaded_id > smallest_requested_id)
     {
-        loading_icon.style.visibility = "visible";
+        loading_icon.style.display = "block";
     }
-    else loading_icon.style.visibility = "hidden";
+    else loading_icon.style.display = "none";
 }
 
 function request_biggest_id()
