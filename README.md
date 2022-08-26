@@ -56,7 +56,7 @@ $ source web-chat/virtual-enviroment/bin/activate
 ```
 Start the server
 ```
-(virtual-enviroment) $ python3 web-chat/src/app.py
+(virtual-enviroment) $ python3 web-chat/run.py
 ```
 The web app should now be accessible at `0.0.0.0:5000`
 
