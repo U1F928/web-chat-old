@@ -6,14 +6,12 @@ A simple web application that allows users to create, join and chat in anonymous
  
 https://web-chat.fly.dev/ 
  
-## Description 
+## Built With
  
-An in-depth paragraph about your project and overview of use. 
- 
-* Backend is implemented in Python using the Flask framework. 
-* Data is stored in a SQLite database which is integrated via Flask-SQLAlchemy. 
-* Real-time communication between client and server is handled by Flask-SocketIO. 
-* Frontend is implemented using vanilla JavaScript, HTML, CSS. 
+* Backend is implemented in **Python** using the **Flask** framework. 
+* Data is stored using a **SQLite** database engine and **SQLAlchemy**
+* Real-time communication between client and server is handled by **Socket.IO**. 
+* Frontend is implemented using vanilla **JavaScript**, **HTML**, **CSS**. 
  
 ## Getting Started 
  
