@@ -30,19 +30,19 @@ $ git clone https://github.com/U1F928/web-chat
 ``` 
 Create a virtual environment in the project directory 
 ``` 
-$ python3 -m venv web-chat/virtual-enviroment 
+$ python3 -m venv web-chat/virtual_environment 
 ``` 
 Activate the virtual environment 
 ``` 
-$ source web-chat/virtual-enviroment/bin/activate 
+$ source web-chat/virtual_environment/bin/activate 
 ``` 
 Install dependencies into the virtual environment 
 ``` 
-(virtual-enviroment) $ python3 -m pip install -r web-chat/requirements.txt 
+(virtual_environment) $ python3 -m pip install -r web-chat/requirements.txt 
 ``` 
 Deactivate the virtual environment 
 ``` 
-(virtual-enviroment) $ deactivate 
+(virtual_environment) $ deactivate 
 ``` 
  
  
@@ -50,11 +50,11 @@ Deactivate the virtual environment
  
 Activate the virtual environment 
 ``` 
-$ source web-chat/virtual-enviroment/bin/activate 
+$ source web-chat/virtual_environment/bin/activate 
 ``` 
 Start the server 
 ``` 
-(virtual-enviroment) $ python3 web-chat/run.py 
+(virtual_environment) $ python3 web-chat/run.py 
 ``` 
 The web app should now be accessible at `0.0.0.0:5000` 
  
