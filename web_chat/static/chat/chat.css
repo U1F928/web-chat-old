@@ -5,10 +5,12 @@ body
 }
 #chat
 {
-	height: 98vh;
+	height: 99%;
+	width: 99%;
+	position: fixed;
 	box-sizing: border-box;
 	display: grid;
-	grid-template-rows: 4% auto 8%;
+	grid-template-rows: 30pt auto 30pt;
 	background-color: #fff;
 	font-family: "Calibri", "Roboto", sans-serif;
 	border: 0.5vh solid grey;
@@ -18,28 +20,14 @@ body
 	margin-left: 0.5vw;
 	margin-right: 0.5vw;
 }
-@media only screen and (max-height: 600px) 
-{
-	#chat
-	{
-		grid-template-rows: 4% auto 8%;
-	}
-}
-@media only screen and (max-height: 330px) 
-{
-	#chat
-	{
-		grid-template-rows: 4% auto 15%;
-	}
-}
 #room-name
 {
 	overflow: hidden;
 	border-bottom: 0.5vh solid grey;
 	color: rgb(75, 74, 74);
 	text-align: center;
-	font-size: 3vh;
 	word-break: break-all;
+	font-size: 20pt;
 }
 #comment-section
 {
@@ -68,12 +56,8 @@ body
 }
 #send-comment
 {
-	margin: 0.2rem;
-	overflow: hidden;
-	margin-top: 1vh;
-	margin-bottom: 1vh;
 	display: grid;
-	grid-template-columns: auto 10vw;
+	grid-template-columns: auto 10%;
 	word-wrap: break-word;
 }
 #comment-form
