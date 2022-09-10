@@ -102,12 +102,12 @@ function insert_comment(new_comment)
         }
     }
     // if new_comment is newer than all other comments in comment section append it
-    let scrolled_to_bottom = comment_section.scrollHeight - comment_section.scrollTop === comment_section.clientHeight
+    let scrolled_to_bottom = comment_section.scrollHeight - comment_section.scrollTop - comment_section.clientHeight < 1; 
     comment_section.appendChild(new_comment);
     if (scrolled_to_bottom)
     {
         // scroll back to the bottom
-        comment_section.scrollTop = comment_section.scrollHeight - comment_section.clientHeight;
+        comment_section.scrollTop = comment_section.scrollHeight; 
     }
     else
     {
@@ -138,7 +138,7 @@ function send_comment()
         { text: text, room_name: room_name }
     );
     // scroll to the bottom
-    comment_section.scrollTop = comment_section.scrollHeight - comment_section.clientHeight;
+    comment_section.scrollTop = comment_section.scrollHeight; 
 }
 
 function add_listener_for_send_by_enter()
