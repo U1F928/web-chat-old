@@ -6,7 +6,7 @@ body
 	padding: 0;
 }
 
-.loginbar 
+.join
 {
 	height: 100vh;
 	display: flex;
@@ -15,22 +15,24 @@ body
 	justify-content: center;
 }
 
-input
+#room-name-form
 {
-	border: #1d7233 solid 0.2%;
-	border-radius: 0.5rem;
-	font-size: 1.5rem;
-	margin: 1%;
-	padding: 0.5rem;
+	border: grey solid 2px;
+	border-radius: 5px;
+	font-size: min(1.5em, 5vw);
+	padding: min(0.5em, 2vw);
+	margin-bottom: 2vh;
 }
 
-#login-button
+#join-button
 {
-	border: #1d7233 solid 0.5vh;
+	border: #1d7233 solid 2px;
 	background-color: #34C759;
-	color: white;
+	border-radius: 5px;
 	cursor: pointer;
-	font-size: 1.5rem;
+	font-size: min(1.5em, 5vw);
+	padding: min(0.5em, 2vw);
+	color: white;
 }
 
 #login-button:hover
