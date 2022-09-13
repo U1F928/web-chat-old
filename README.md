@@ -36,7 +36,7 @@ $ docker build -t web-chat-image web-chat
  
 
 ``` 
-$ docker run --detach --publish 0.0.0.0:80:8080
+$ docker run --detach --publish 0.0.0.0:80:8080 web-chat-image
 ``` 
 The web application should now be accessible at `0.0.0.0` 
  
