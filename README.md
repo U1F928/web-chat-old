@@ -17,10 +17,8 @@ https://web-chat.fly.dev/
  
 ### Prerequisites 
  
-* python3 
-* python3-pip 
-* python3-venv 
-* git 
+* Docker
+* Git
  
 ### Installation 
  
@@ -28,39 +26,24 @@ Clone the project
 ``` 
 $ git clone https://github.com/U1F928/web-chat 
 ``` 
-Create a virtual environment in the project directory 
+Build the image
 ``` 
-$ python3 -m venv web-chat/virtual_environment 
-``` 
-Activate the virtual environment 
-``` 
-$ source web-chat/virtual_environment/bin/activate 
-``` 
-Install dependencies into the virtual environment 
-``` 
-(virtual_environment) $ python3 -m pip install -r web-chat/requirements.txt 
-``` 
-Deactivate the virtual environment 
-``` 
-(virtual_environment) $ deactivate 
+$ docker build -t web-chat-image web-chat
 ``` 
  
  
 ### Run Locally 
  
-Activate the virtual environment 
+
 ``` 
-$ source web-chat/virtual_environment/bin/activate 
+$ docker run --detach --publish 0.0.0.0:80:8080
 ``` 
-Start the server 
-``` 
-(virtual_environment) $ python3 web-chat/run.py 
-``` 
-The web app should now be accessible at `0.0.0.0:5000` 
+The web application should now be accessible at `0.0.0.0` 
  
 ## Screenshots 
  
-![home-page-3-web-chat](https://user-images.githubusercontent.com/110688318/186491454-38f28670-9f62-41c1-9495-ec39c5f35693.png) 
- 
- 
-![chat-page-2-web-chat](https://user-images.githubusercontent.com/110688318/186485716-a72e64fe-3e36-4f57-81d9-46eb423af412.png)
+![web-chat-home](https://user-images.githubusercontent.com/110688318/189998833-dfbafa5c-eb1b-4c1f-b1fa-fe9d5bca44e8.png)
+
+![web-chat-chat](https://user-images.githubusercontent.com/110688318/189998850-a4dc68ee-74f2-484e-b601-03b2ad3ab1b3.png)
+
+
