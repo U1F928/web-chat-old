@@ -54,9 +54,10 @@ body
 #send-comment
 {
 	display: grid;
-	grid-template-columns: auto minmax(10%, 15%);
+	grid-template-columns: minmax(min-content, auto) minmax(min-content, 15%);
 	word-wrap: break-word;
 	margin: 0.1em;
+	overflow-x: auto;
 }
 #comment-form
 {
