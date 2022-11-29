@@ -8,10 +8,10 @@ https://web-chat.fly.dev/
  
 ## Built With
  
-* Backend is implemented in **Python** using the **Flask** framework. 
+* Back end is implemented in **Python** using the **Flask** framework. 
 * Data is stored using a **SQLite** database engine and **SQLAlchemy**
-* Real-time communication between client and server is handled by **Socket.IO**. 
-* Frontend is implemented using **JavaScript**, **HTML**, **CSS**. 
+* Real-time communication between the client and the server is handled by **Socket.IO**. 
+* Front end is implemented using **JavaScript**, **HTML**, **CSS**. 
  
 ## Getting Started 
  
